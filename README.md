@@ -1,7 +1,7 @@
 # Namaste React 🚀
 
 
-# Parcel
+# NPM
 - Dev Build
 - Local Server
 - HMR = Hot Module Replacement
