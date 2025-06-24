@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import useRecipesCards from '../utils/useRecipesCards';
 import AccordionItem from './AccordionItem';
+import { IoIosArrowDropupCircle } from "react-icons/io";
+import { IoIosArrowDropdownCircle } from "react-icons/io";
+
 
 const ResCategory = () => {
   const resCategoryData = useRecipesCards();
@@ -24,16 +27,16 @@ const ResCategory = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4 text-center mt-16">Recipes Grouped by Cuisine</h2>
+      <h2 className="text-3xl font-bold mb-4 text-center mt-16">Recipes Grouped by Cuisine</h2>
 
       {Object.entries(groupedByCuisine).map(([cuisine, recipes]) => (
-        <div key={cuisine} className="mb-6 bg-slate-100 w-6/12 mx-auto p-4 shadow-lg rounded">
+        <div key={cuisine} className="mb-6 bg-slate-100 w-3/4 mx-auto p-4 shadow-lg rounded">
           <h3
             className="text-lg font-semibold text-blue-900 mb-2 cursor-pointer flex justify-between items-center"
             onClick={() => handleToggleAccordion(cuisine)}
           >
             {cuisine}
-            <span>{openCuisine === cuisine ? '🔼' : '🔽'}</span>
+            <span>{openCuisine === cuisine ? <IoIosArrowDropupCircle /> : <IoIosArrowDropdownCircle />}</span>
           </h3>
 
           {openCuisine === cuisine && (

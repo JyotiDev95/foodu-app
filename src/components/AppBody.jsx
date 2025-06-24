@@ -73,7 +73,7 @@ console.log(jsonData)
         </div>
         <div className=" mt-2 flex flex-wrap gap-4 mb-12">
           {filtertheRestaurantList.map((item) => (
-            <Link key={item.id} className=''
+            <Link key={item.id} className='flex-1'
             to={'/recipes/'+item.id}>
 
 

@@ -13,9 +13,9 @@ const UpdatedRestaurantCard = higherRestaurantCard(RestaurantCard)
 if (!recipesState || recipesState.length === 0) return <p>Loading recommended recipes...</p>;
   return (
      
-        <div className=" mt-2 flex flex-wrap gap-4">
-                 {recipesState.slice(0, 5).map((item) => (
-          <div key={item.id}>
+        <div className=" mt-2 flex flex-nowrap md:flex-wrap gap-4">
+                 {recipesState.slice(0, 4).map((item) => (
+          <div key={item.id} className='flex-1'>
                    <Link to={'/recipes/'+item.id}>
            {item.tags.includes("Chicken") || item.tags.includes("Beef") || item.ingredients.includes("meat") || item.name.includes("Chicken") || item.instructions.includes("meat") 
   ? <UpdatedRestaurantCard resData={item} /> 
