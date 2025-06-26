@@ -19,8 +19,7 @@ const labels = {
 const RestaurantCard = ({resData}) => {
   const { name, cuisine, image, rating = 0, prepTimeMinutes, tags } = resData;
     return (
-    <div className='resCard h-full flex-1 bg-gray-100 border border-transparent p-4 min-w-[260px] rounded-lg hover:border-yellow-200'>
-    
+    <div className='resCard h-full flex-1 bg-gray-100 border border-transparent p-4 min-w-[260px] rounded-lg hover:border-yellow-200 max-w-[288px]'>
       <img src={image || 'https://via.placeholder.com/150'} alt={name} className='max-h-[170px] w-full object-cover mb-4' />
       <h3 className='font-bold'>{name}</h3>
       <h4 className='text-sm'>{cuisine}</h4>
